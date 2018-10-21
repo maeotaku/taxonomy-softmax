@@ -82,20 +82,20 @@ hierarchy_matrix = np.array([[1,0,1,0],[0,1,0,1]])
 print("probs", probs)
 batch_size = probs.shape[0]
 print("hierarchy_matrix", hierarchy_matrix)
-res = pksoftmax_np(probs, hierarchy_matrix, batch_size)
-print("PKSoftmax numpy", res)
+res = TSoftmax_np(probs, hierarchy_matrix, batch_size)
+print("TSoftmax numpy", res)
 
 #CPU
 probs = torch.FloatTensor(probs)
 hierarchy_matrix = torch.FloatTensor(hierarchy_matrix)
 batch_size = probs.size()[0]
-res = pksoftmax(probs, hierarchy_matrix, batch_size)
-print("PKSoftmax PyTorch Func", res)
-l = PKSoftmax(hierarchy_matrix, apply_softmax=True, verbose=True)
+res = TSoftmax(probs, hierarchy_matrix, batch_size)
+print("TSoftmax PyTorch Func", res)
+l = TSoftmax(hierarchy_matrix, apply_softmax=True, verbose=True)
 probs = np.array(   [[34.3 ,34.4, 30.2, 33.2],
                     [10.2 ,11.7, 7, 10.9],
                     [0.27 ,0.1, 0.13, 0.4]])
 probs = torch.FloatTensor(probs)
 res = l(probs)
-print("PKSoftmax PyTorch Layer", res)
+print("TSoftmax PyTorch Layer", res)
 '''

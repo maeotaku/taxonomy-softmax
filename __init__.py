@@ -1,1 +1,2 @@
-from .multilabeldataset import XMLMultiLabelDataset
+from .CrossEntropyLossTSoftmax import CrossEntropyLossTSoftmax
+from .TSoftmax import TSoftmax
