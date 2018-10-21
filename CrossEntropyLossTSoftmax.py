@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-from TSoftmax import TSoftmax
+from .TSoftmax import TSoftmax
 
 class CrossEntropyLossTSoftmax(TSoftmax):
 
