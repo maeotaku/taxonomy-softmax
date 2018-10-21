@@ -1,0 +1,6 @@
+This repo contains a new type of Softmax named Taxonomy Softmax (T-Softmax), which uses a hierarchy of classes to calculate the probability of a class. 
+Code contains also the log loss associated with it. 
+
+Code in another repo builds the hierarchy of classes. Datasets compatible with this can be found here:
+http://otmedia.lirmm.fr/LifeCLEF/
+
